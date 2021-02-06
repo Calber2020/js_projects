@@ -16,7 +16,6 @@ p1Button.addEventListener('click', function () {
         }
         p1Display.textContent = p1Score;
     }
-    
 })
 
 p2Button.addEventListener('click', function () {
@@ -27,6 +26,5 @@ p2Button.addEventListener('click', function () {
         }
         p2Display.textContent = p2Score;
     }
-    
 })
 

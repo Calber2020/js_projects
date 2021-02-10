@@ -18,6 +18,7 @@ const fetchBitcoinPrice = async () => {
 }
 
 const getDadJoke = async () => {
-    const res = await axios.get('https://icanhazdadjoke.com/',)
+    const config = { headers: {Accept: 'application/json'} }
+    const res = await axios.get('https://icanhazdadjoke.com/', config)
     console.log(res)
 }

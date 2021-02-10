@@ -1,5 +1,7 @@
 // const { default: axios } = require("axios");
 
+const { default: axios } = require("axios");
+
 // const fetchBitcoinPrice = async () => {
 //     try {
 //         const res = await axios.get('https://api.cryptonator.com/api/ticker/btc-usd')
@@ -18,7 +20,9 @@
 // }
 
 const form = document.querySelector('#searchForm');
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', async function (e) {
     e.preventDefault();
-    console.log(form.elements.query.value)
+    const searchTerm = form.elements.query.value;
+    const res = await axios.get(`http://api.tvmaze.com/search/shows?q=${searchTerm}`);
+    console.log(res.data);
 })

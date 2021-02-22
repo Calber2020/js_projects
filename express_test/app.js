@@ -17,3 +17,5 @@ app.get('/r/:subreddit', (req, res) => {
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000")
 })
+
+// <%= num%2===0 ? 'EVEN' : "ODD" %>

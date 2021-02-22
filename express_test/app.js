@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
 app.get('/r/:subreddit', (req, res) => {
     const {subreddit} = req.params
-    res.render('subreddit', {subreddit})
+    res.render('subreddit', {subreddit});
 })
 
 app.get('/rand', (req, res) => {

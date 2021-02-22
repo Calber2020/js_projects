@@ -6,17 +6,17 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
 
 app.get('/', (req, res) => {
-    res.render('home.ejs')
+    res.render('home')
 })
 
 app.get('/r/:subreddit', (req, res) => {
-    const {subreddit} = req.params
-    res.render('subreddit', {subreddit});
+    const { subreddit } = req.params;
+    res.render('subreddit', { subreddit });
 })
 
-app.get('/rand', (req, res) => {
-    res.render('random')
-})
+// app.get('/rand', (req, res) => {
+//     res.render('random')
+// })
 
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000")

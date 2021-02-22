@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
     res.render('home.ejs')
 })
 
+app.get('/r/:subreddit', (req, res) => {
+    const {subreddit} = req.params
+    res.render('subreddit', {subreddit})
+})
 
 app.get('/rand', (req, res) => {
     res.render('random')

@@ -13,6 +13,7 @@ app.get('/cats', (req, res) => {
     const cats = [
         'Blue', 'Rocket', 'Monty', 'Stephanie', 'Winston'
     ]
+    res.render('cats', { cats })
 })
 
 app.get('/r/:subreddit', (req, res) => {
